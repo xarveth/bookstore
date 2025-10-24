@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - SRGI Bookstore</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="validation.js"></script>
+</head>
+<body class="form-page">
+  <div class="form-container">
+    <h2>Registration</h2>
+
+    <form onsubmit="return validateForm()">
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Enter your name"><br>
+
+      <label>Email:</label>
+      <input type="text" id="email" placeholder="Enter your email"><br>
+
+      <label>Gender:</label><br>
+      <input type="radio" name="gender"> Male
+      <input type="radio" name="gender"> Female
+      <input type="radio" name="gender"> Other<br><br>
+
+      <label>Mobile No:</label>
+      <input type="text" id="phone" placeholder="10-digit number"><br>
+
+      <label>Date of Birth:</label><br>
+      <input type="text" size="2" placeholder="DD">
+      <input type="text" size="2" placeholder="MM">
+      <input type="text" size="4" placeholder="YYYY"><br><br>
+
+      <label>Languages Known:</label><br>
+      <input type="checkbox"> Hindi
+      <input type="checkbox"> English
+      <input type="checkbox"> Others<br><br>
+
+      <label>Address:</label><br>
+      <textarea rows="2" cols="25" placeholder="Enter your address"></textarea><br>
+
+      <label>Create Password:</label>
+      <input type="password" id="password" placeholder="Enter password"><br>
+
+      <button type="submit">Register</button><br><br>
+      <button type="button" onclick="window.location.href='right.html'">Back</button>
+    </form>
+  </div>
+</body>
+</html>
