@@ -2,123 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home - SR Group Of Institution</title>
+  <title>Home - SRGI Bookstore</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .homepage-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-      height: 100vh;
-      gap: 2px;
-      background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
-    }
-    
-    .nav-section {
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    
-    .nav-section:hover {
-      background-color: #f0f8ff;
-    }
-    
-    .nav-section h3 {
-      margin: 0 0 10px 0;
-      color: #003366;
-      font-size: 18px;
-    }
-    
-    .nav-section p {
-      margin: 0;
-      color: #666;
-      font-size: 14px;
-    }
-    
-    .header-section {
-      grid-column: 1 / -1;
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 30px;
-      text-align: center;
-    }
-    
-    .header-section h1 {
-      color: #003366;
-      font-size: 28px;
-      margin: 0 0 10px 0;
-    }
-    
-    .header-section h2 {
-      color: #666;
-      font-size: 20px;
-      margin: 0;
-      font-weight: normal;
-    }
-    
-    .logo-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-    
-    .logo {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-    }
-  </style>
 </head>
-<body>
-  <div class="homepage-layout">
-    
-    <div class="header-section">
-      <div class="logo-section">
-        <img src="https://envs.sh/8XZ.png" alt="SRGI Logo" class="logo">
-        <div>
-          <h1>SR Group Of Institution</h1>
-          <h2>Bookstore</h2>
-        </div>
-      </div>
-    </div>
-    
-    <div class="nav-section" onclick="parent.frames['right'].location.href='catalogue.html'">
-      <h3>📚 Catalogue</h3>
-      <p>Browse our complete collection of academic books and resources</p>
-    </div>
-    
-    <div class="nav-section" onclick="parent.frames['right'].location.href='subjects/computer.html'">
-      <h3>💻 Computer Science</h3>
-      <p>Programming, algorithms, databases, and software engineering books</p>
-    </div>
-    
-    <div class="nav-section" onclick="parent.frames['right'].location.href='subjects/mechanical.html'">
-      <h3>⚙️ Mechanical</h3>
-      <p>Engineering mechanics, thermodynamics, and machine design</p>
-    </div>
-    
-    <div class="nav-section" onclick="parent.frames['right'].location.href='login.html'">
-      <h3>🔐 Login</h3>
-      <p>Access your account to view orders and manage preferences</p>
-    </div>
-    
-    <div class="nav-section" onclick="parent.frames['right'].location.href='cart.html'">
-      <h3>🛒 Cart</h3>
-      <p>Review your selected books and proceed to checkout</p>
-    </div>
-    
-    <div class="nav-section" onclick="parent.frames['right'].location.href='registration.html'">
-      <h3>📝 Sign Up</h3>
-      <p>Create a new account to start shopping for books</p>
-    </div>
-    
+<body class="right">
+
+  <div class="home">
+    <h2>Welcome to SR Group Of Institution Bookstore</h2>
+    <p>
+      Welcome to the official bookstore of Shri Ramswaroop Group of Professional Colleges. 
+      We provide a comprehensive collection of academic books for all engineering disciplines.
+    </p>
+    <p>
+      Browse our catalogue to find textbooks, reference materials, and study guides 
+      carefully selected to support your academic journey. Our easy-to-use shopping 
+      cart system makes purchasing books simple and convenient.
+    </p>
+    <p>
+      <strong>Get started:</strong> Use the navigation above to browse our catalogue, 
+      or select a specific subject from the left panel to find books for your course.
+    </p>
   </div>
+
 </body>
 </html>
