@@ -2,34 +2,39 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Book Catalogue</title>
+  <title>Catalogue</title>
   <style>
     body{font-family:Arial;margin:20px}
+    img{width:50px;height:70px;border-radius:4px}
+    button{background:#f4a460;color:#fff;border:none;padding:6px 12px;cursor:pointer}
+    button:hover{background:#e38b3c}
     table{width:100%;border-collapse:collapse}
-    th,td{padding:10px;border-bottom:1px solid #ddd}
+    th,td{padding:10px;border-bottom:1px solid #ddd;text-align:left}
     th{background:#f4a460;color:#fff}
-    .add{background:#f4a460;color:#fff;border:none;padding:6px 12px;cursor:pointer}
-    .add:hover{background:#e38b3c}
   </style>
 </head>
 <body>
   <h2>Book Catalogue</h2>
   <table>
     <tr><th>Book</th><th>Author</th><th>Publisher</th><th>Price</th><th></th></tr>
-    <tr><td>Artificial Intelligence</td><td>Wiley</td><td>Wiley</td><td>499</td><td><button class="add" onclick="addToCart('Artificial Intelligence',499)">Add</button></td></tr>
-    <tr><td>Civil Engineering</td><td>Prentice Hall</td><td>PH</td><td>630</td><td><button class="add" onclick="addToCart('Civil Engineering',630)">Add</button></td></tr>
-    <tr><td>Data Structures</td><td>BPB</td><td>BPB</td><td>300</td><td><button class="add" onclick="addToCart('Data Structures',300)">Add</button></td></tr>
-    <tr><td>Electrical Engg.</td><td>BPB</td><td>BPB</td><td>555</td><td><button class="add" onclick="addToCart('Electrical Engg.',555)">Add</button></td></tr>
+    <tr>
+      <td><img src="https://m.media-amazon.com/images/I/81d6eZvFF2L._AC_UF1000,1000_QL80_.jpg"></td>
+      <td>Artificial Intelligence</td><td>Wiley</td><td>₹499</td>
+      <td><button onclick="add('Artificial Intelligence',499)">Add</button></td>
+    </tr>
+    <tr>
+      <td><img src="https://m.media-amazon.com/images/I/91kQpEVppxL._UF1000,1000_QL80_.jpg"></td>
+      <td>Data Structures</td><td>BPB</td><td>₹399</td>
+      <td><button onclick="add('Data Structures',399)">Add</button></td>
+    </tr>
   </table>
 
   <script>
-    function addToCart(b,p){
-      let c=JSON.parse(localStorage.getItem("cart")||"[]");
-      let t=+localStorage.getItem("total")||0;
-      c.push({b,p}); t+=p;
-      localStorage.setItem("cart",JSON.stringify(c));
-      localStorage.setItem("total",t);
-      alert(b+" added to cart!");
+    let cart=JSON.parse(localStorage.getItem("cart")||"[]");
+    function add(b,p){
+      cart.push({b,p});
+      localStorage.setItem("cart",JSON.stringify(cart));
+      alert(`${b} added to cart!`);
     }
   </script>
 </body>
