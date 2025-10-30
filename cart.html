@@ -17,20 +17,30 @@
   <button onclick="checkout()">Checkout</button>
 
   <script>
-    let c=JSON.parse(localStorage.getItem("cart")||"[]");
+    // Clean invalid entries
+    let c=(JSON.parse(localStorage.getItem("cart"))||[]).filter(i=>i.b && i.p);
     let t=+localStorage.getItem("total")||0;
+
     function show(){
-      list.innerHTML=""; total.textContent=t;
-      c.forEach(i=>list.innerHTML+=`<li>${i.b} - ₹${i.p}</li>`);
+      list.innerHTML="";
+      t=0;
+      c.forEach(i=>{
+        list.innerHTML+=`<li>${i.b} - ₹${i.p}</li>`;
+        t+=i.p;
+      });
+      total.textContent=t;
     }
+
     function checkout(){
-      if(!c.length)return alert("Cart empty!");
+      if(!c.length) return alert("Cart empty!");
       alert("Order placed!");
-      c=[];t=0;
+      c=[]; t=0;
       localStorage.setItem("cart","[]");
       localStorage.setItem("total","0");
       show();
     }
+
+    localStorage.setItem("cart",JSON.stringify(c)); // update cleaned data
     show();
   </script>
 </body>
