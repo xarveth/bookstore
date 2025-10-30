@@ -1,49 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Your Cart</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #fff;
-    }
-    h2 {
-      color: #333;
-    }
-    #cartList {
-      list-style: none;
-      padding: 0;
-    }
-    #cartList li {
-      background: #f9f9f9;
-      margin-bottom: 10px;
-      padding: 12px;
-      border-radius: 6px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.1);
-    }
-    button {
-      background-color: #f4a460;
-      color: white;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover {
-      background-color: #e38b3c;
-    }
+    body{font-family:Arial;margin:20px}
+    li{margin:5px 0}
+    button{background:#f4a460;color:#fff;border:none;padding:8px 14px;cursor:pointer}
+    button:hover{background:#e38b3c}
   </style>
 </head>
 <body>
-
   <h2>Your Cart</h2>
-  <ul id="cartList"></ul>
-  <p><strong>Total: ₹<span id="totalAmount">0</span></strong></p>
+  <ul id="list"></ul>
+  <p><b>Total: ₹<span id="total">0</span></b></p>
   <button onclick="checkout()">Checkout</button>
 
-  <script src="script.js"></script>
+  <script>
+    let c=JSON.parse(localStorage.getItem("cart")||"[]");
+    let t=+localStorage.getItem("total")||0;
+    function show(){
+      list.innerHTML=""; total.textContent=t;
+      c.forEach(i=>list.innerHTML+=`<li>${i.b} - ₹${i.p}</li>`);
+    }
+    function checkout(){
+      if(!c.length)return alert("Cart empty!");
+      alert("Order placed!");
+      c=[];t=0;
+      localStorage.setItem("cart","[]");
+      localStorage.setItem("total","0");
+      show();
+    }
+    show();
+  </script>
 </body>
 </html>
