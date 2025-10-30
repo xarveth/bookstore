@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>Catalogue</title>
   <style>
-    body{font-family:Arial;margin:20px}
-    img{width:60px;height:80px;border-radius:4px;object-fit:cover}
-    button{background:#f4a460;color:#fff;border:none;padding:6px 12px;cursor:pointer}
-    button:hover{background:#e38b3c}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:10px;border-bottom:1px solid #ddd;text-align:left}
-    th{background:#f4a460;color:#fff}
+    body {font-family: Arial; margin: 20px;}
+    img {width: 60px; height: 80px; border-radius: 4px; object-fit: cover;}
+    button {background: #f4a460; color: #fff; border: none; padding: 6px 12px; cursor: pointer;}
+    button:hover {background: #e38b3c;}
+    table {width: 100%; border-collapse: collapse;}
+    th, td {padding: 10px; border-bottom: 1px solid #ddd; text-align: left;}
+    th {background: #f4a460; color: #fff;}
   </style>
 </head>
 <body>
@@ -20,7 +20,7 @@
 
     <!-- Computer / AI -->
     <tr>
-      <td><img src="https://m.media-amazon.com/images/I/71B3y2pYxDL._SY466_.jpg" alt="AI"></td>
+      <td><img src="https://envs.sh/9rv.jpg" alt="AI"></td>
       <td>Artificial Intelligence</td><td>Wiley</td><td>₹499</td>
       <td><button onclick="add('Artificial Intelligence',499)">Add</button></td>
     </tr>
@@ -39,7 +39,6 @@
       <td><button onclick="add('Concrete Technology',390)">Add</button></td>
     </tr>
 
-    <!-- Civil General -->
     <tr>
       <td><img src="https://m.media-amazon.com/images/I/71pRxT2P0gL._SY466_.jpg" alt="Civil Engineering"></td>
       <td>Civil Engineering</td><td>Prentice Hall</td><td>₹630</td>
@@ -48,7 +47,7 @@
 
     <!-- Electrical -->
     <tr>
-      <td><img src="https://m.media-amazon.com/images/I/61ZK9vZ5DQL._SY466_.jpg" alt="Electrical Engineering"></td>
+      <td><img src="https://envs.sh/9r6.jpg" alt="Electrical Engineering"></td>
       <td>Electrical Engineering</td><td>BPB</td><td>₹555</td>
       <td><button onclick="add('Electrical Engineering',555)">Add</button></td>
     </tr>
@@ -69,17 +68,17 @@
 
     <!-- IT / Network Security -->
     <tr>
-      <td><img src="https://m.media-amazon.com/images/I/81dSFiW0KvL._SY466_.jpg" alt="Network Security"></td>
+      <td><img src="https://envs.sh/9ry.jpg" alt="Network Security"></td>
       <td>Network Security</td><td>S. Pramanik</td><td>₹450</td>
       <td><button onclick="add('Network Security',450)">Add</button></td>
     </tr>
   </table>
 
   <script>
-    let cart = JSON.parse(localStorage.getItem("cart")||"[]");
-    function add(b,p){
-      cart.push({b,p});
-      localStorage.setItem("cart",JSON.stringify(cart));
+    let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    function add(b, p) {
+      cart.push({ b, p });
+      localStorage.setItem("cart", JSON.stringify(cart));
       alert(`${b} added to cart!`);
     }
   </script>
