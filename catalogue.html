@@ -3,187 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogue - SR Group Of Institution</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Book Catalogue</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 40px;
             background-color: #fff;
         }
-        header {
-            background-color: white;
-            border-bottom: 2px solid #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 40px;
-        }
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-section img {
-            height: 50px;
-        }
-        .logo-section h1 {
-            font-size: 24px;
-            color: #222;
-            margin: 0;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 30px;
-        }
-        nav a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #f4a460;
-        }
 
-        .catalogue-container {
-            display: flex;
-            margin-top: 20px;
-        }
-        .sidebar {
-            width: 250px;
-            border-right: 2px solid #ddd;
-            padding: 20px;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-        .sidebar li {
-            padding: 10px 0;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .sidebar li:hover {
-            color: #f4a460;
-        }
-
-        .catalogue-table {
-            flex: 1;
-            padding: 20px;
-        }
         table {
             width: 100%;
             border-collapse: collapse;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
         }
+
         thead {
             background-color: #f4a460;
+            color: white;
         }
+
         th, td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
+
         .book-img {
             width: 60px;
             height: 80px;
             object-fit: cover;
+            border-radius: 4px;
         }
+
         .add-cart-btn {
             background-color: #f4a460;
             color: white;
             padding: 8px 16px;
             border: none;
-            cursor: pointer;
             border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
         }
-        footer {
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            background-color: #f9f9f9;
-            border-top: 2px solid #ddd;
-            font-size: 14px;
+
+        .add-cart-btn:hover {
+            background-color: #e38b3c;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-section">
-            <img src="https://srgi.ac.in/wp-content/uploads/2019/07/cropped-cropped-logo-2-1.jpg" alt="SR Logo">
-            <h1>SR Group Of Institution</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="catalogue.html" class="active">Catalogue</a></li>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="catalogue-container">
-        <aside class="sidebar">
-            <ul>
-                <li>Mechanical</li>
-                <li>Electrical</li>
-                <li>Civil</li>
-                <li>Computer Science</li>
-                <li>Information Technology</li>
-            </ul>
-        </aside>
+    <table>
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Price</th>
+                <th>Add to Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/81d6eZvFF2L._AC_UF1000,1000_QL80_.jpg" alt="AI" class="book-img"></td>
+                <td>Artificial Intelligence</td>
+                <td>Wiley</td>
+                <td>$40.5</td>
+                <td><button class="add-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/71pRxT2P0gL._AC_UF1000,1000_QL80_.jpg" alt="Civil" class="book-img"></td>
+                <td>Civil Engineering</td>
+                <td>Prentice Hall</td>
+                <td>$63</td>
+                <td><button class="add-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/91kQpEVppxL._UF1000,1000_QL80_.jpg" alt="DS" class="book-img"></td>
+                <td>Data Structures</td>
+                <td>BPB Publications</td>
+                <td>$30</td>
+                <td><button class="add-cart-btn">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="http://mittalbooks.com/cdn/shop/products/8182930774__14458_674d8409-4ccb-4d5a-8634-8107f4e1b23c_1200x1200.jpg" alt="EE" class="book-img"></td>
+                <td>Electrical Engineering</td>
+                <td>BPB Publications</td>
+                <td>$55.5</td>
+                <td><button class="add-cart-btn">Add to Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
 
-        <div class="catalogue-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Book</th>
-                        <th>Author</th>
-                        <th>Publisher</th>
-                        <th>Price</th>
-                        <th>Add to Cart</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="https://m.media-amazon.com/images/I/81d6eZvFF2L._AC_UF1000,1000_QL80_.jpg" alt="AI" class="book-img"></td>
-                        <td>Artificial Intelligence</td>
-                        <td>Wiley</td>
-                        <td>$40.5</td>
-                        <td><button class="add-cart-btn">Add to Cart</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://m.media-amazon.com/images/I/71pRxT2P0gL._AC_UF1000,1000_QL80_.jpg" alt="Civil" class="book-img"></td>
-                        <td>Civil Engineering</td>
-                        <td>Prentice Hall</td>
-                        <td>$63</td>
-                        <td><button class="add-cart-btn">Add to Cart</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://m.media-amazon.com/images/I/91kQpEVppxL._UF1000,1000_QL80_.jpg" alt="DS" class="book-img"></td>
-                        <td>Data Structures</td>
-                        <td>BPB Publications</td>
-                        <td>$30</td>
-                        <td><button class="add-cart-btn">Add to Cart</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="http://mittalbooks.com/cdn/shop/products/8182930774__14458_674d8409-4ccb-4d5a-8634-8107f4e1b23c_1200x1200.jpg" alt="EE" class="book-img"></td>
-                        <td>Electrical Engineering</td>
-                        <td>BPB Publications</td>
-                        <td>$55.5</td>
-                        <td><button class="add-cart-btn">Add to Cart</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 SR Group Of Institution. All rights reserved.</p>
-    </footer>
 </body>
 </html>
