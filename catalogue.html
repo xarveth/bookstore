@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Catalogue</title>
+  <title>Book Catalogue</title>
   <style>
     body {font-family: Arial; margin: 20px;}
     img {width: 60px; height: 80px; border-radius: 4px; object-fit: cover;}
@@ -15,6 +15,7 @@
 </head>
 <body>
   <h2>Book Catalogue</h2>
+
   <table>
     <tr><th>Book</th><th>Author</th><th>Publisher</th><th>Price</th><th></th></tr>
 
@@ -34,15 +35,16 @@
 
     <!-- Civil -->
     <tr>
+      <td><img src="https://envs.sh/9st.jpg" alt="Civil Engineering"></td>
+      <td>Civil Engineering</td><td>Prentice Hall</td><td>₹630</td>
+      <td><button onclick="add('Civil Engineering',630)">Add</button></td>
+    </tr>
+
+    <!-- Concrete Technology -->
+    <tr>
       <td><img src="https://m.media-amazon.com/images/I/91VXcW8kLRL._SY466_.jpg" alt="Concrete Technology"></td>
       <td>Concrete Technology</td><td>M.S. Shetty</td><td>₹390</td>
       <td><button onclick="add('Concrete Technology',390)">Add</button></td>
-    </tr>
-
-    <tr>
-      <td><img src="https://m.media-amazon.com/images/I/71pRxT2P0gL._SY466_.jpg" alt="Civil Engineering"></td>
-      <td>Civil Engineering</td><td>Prentice Hall</td><td>₹630</td>
-      <td><button onclick="add('Civil Engineering',630)">Add</button></td>
     </tr>
 
     <!-- Electrical -->
@@ -52,14 +54,14 @@
       <td><button onclick="add('Electrical Engineering',555)">Add</button></td>
     </tr>
 
-    <!-- Computer -->
+    <!-- Data Structures -->
     <tr>
-      <td><img src="https://m.media-amazon.com/images/I/91kQpEVppxL._SY466_.jpg" alt="Data Structures"></td>
+      <td><img src="https://files.catbox.moe/lx15ny.jpg" alt="Data Structures"></td>
       <td>Data Structures</td><td>BPB</td><td>₹399</td>
       <td><button onclick="add('Data Structures',399)">Add</button></td>
     </tr>
 
-    <!-- Electrical Power -->
+    <!-- Power Systems -->
     <tr>
       <td><img src="https://m.media-amazon.com/images/I/610DyiR6SRL._SY466_.jpg" alt="Power Systems"></td>
       <td>Power Systems</td><td>P.S.R. Murty</td><td>₹590</td>
