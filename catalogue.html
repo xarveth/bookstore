@@ -1,101 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Catalogue</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #fff;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-
-    thead {
-      background-color: #f4a460;
-      color: white;
-    }
-
-    th, td {
-      padding: 15px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .book-img {
-      width: 60px;
-      height: 80px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-
-    .add-cart-btn {
-      background-color: #f4a460;
-      color: white;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .add-cart-btn:hover {
-      background-color: #e38b3c;
-    }
+    body{font-family:Arial;margin:20px}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px;border-bottom:1px solid #ddd}
+    th{background:#f4a460;color:#fff}
+    .add{background:#f4a460;color:#fff;border:none;padding:6px 12px;cursor:pointer}
+    .add:hover{background:#e38b3c}
   </style>
 </head>
 <body>
-
   <h2>Book Catalogue</h2>
-
   <table>
-    <thead>
-      <tr>
-        <th>Book</th>
-        <th>Author</th>
-        <th>Publisher</th>
-        <th>Price (₹)</th>
-        <th>Add to Cart</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><img src="https://m.media-amazon.com/images/I/81d6eZvFF2L._AC_UF1000,1000_QL80_.jpg" class="book-img"></td>
-        <td>Artificial Intelligence</td>
-        <td>Wiley</td>
-        <td>499</td>
-        <td><button class="add-cart-btn" onclick="addToCart('Artificial Intelligence', 499)">Add to Cart</button></td>
-      </tr>
-      <tr>
-        <td><img src="https://m.media-amazon.com/images/I/71pRxT2P0gL._AC_UF1000,1000_QL80_.jpg" class="book-img"></td>
-        <td>Civil Engineering</td>
-        <td>Prentice Hall</td>
-        <td>630</td>
-        <td><button class="add-cart-btn" onclick="addToCart('Civil Engineering', 630)">Add to Cart</button></td>
-      </tr>
-      <tr>
-        <td><img src="https://m.media-amazon.com/images/I/91kQpEVppxL._UF1000,1000_QL80_.jpg" class="book-img"></td>
-        <td>Data Structures</td>
-        <td>BPB Publications</td>
-        <td>300</td>
-        <td><button class="add-cart-btn" onclick="addToCart('Data Structures', 300)">Add to Cart</button></td>
-      </tr>
-      <tr>
-        <td><img src="http://mittalbooks.com/cdn/shop/products/8182930774__14458_674d8409-4ccb-4d5a-8634-8107f4e1b23c_1200x1200.jpg" class="book-img"></td>
-        <td>Electrical Engineering</td>
-        <td>BPB Publications</td>
-        <td>555</td>
-        <td><button class="add-cart-btn" onclick="addToCart('Electrical Engineering', 555)">Add to Cart</button></td>
-      </tr>
-    </tbody>
+    <tr><th>Book</th><th>Author</th><th>Publisher</th><th>Price</th><th></th></tr>
+    <tr><td>Artificial Intelligence</td><td>Wiley</td><td>Wiley</td><td>499</td><td><button class="add" onclick="addToCart('Artificial Intelligence',499)">Add</button></td></tr>
+    <tr><td>Civil Engineering</td><td>Prentice Hall</td><td>PH</td><td>630</td><td><button class="add" onclick="addToCart('Civil Engineering',630)">Add</button></td></tr>
+    <tr><td>Data Structures</td><td>BPB</td><td>BPB</td><td>300</td><td><button class="add" onclick="addToCart('Data Structures',300)">Add</button></td></tr>
+    <tr><td>Electrical Engg.</td><td>BPB</td><td>BPB</td><td>555</td><td><button class="add" onclick="addToCart('Electrical Engg.',555)">Add</button></td></tr>
   </table>
 
-  <script src="script.js"></script>
+  <script>
+    function addToCart(b,p){
+      let c=JSON.parse(localStorage.getItem("cart")||"[]");
+      let t=+localStorage.getItem("total")||0;
+      c.push({b,p}); t+=p;
+      localStorage.setItem("cart",JSON.stringify(c));
+      localStorage.setItem("total",t);
+      alert(b+" added to cart!");
+    }
+  </script>
 </body>
 </html>
