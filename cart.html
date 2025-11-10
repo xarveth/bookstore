@@ -1,92 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Your Cart</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 20px;
-      background-color: #f8f9fa;
-    }
-    h2 {
-      color: #667eea;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-    ul {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      list-style: none;
-    }
-    li {
-      margin: 10px 0;
-      padding: 8px;
-      border-bottom: 1px solid #e9ecef;
-      color: #495057;
-    }
-    p {
-      font-size: 18px;
-      margin-top: 20px;
-      color: #333;
-    }
-    button {
-      background-color: #667eea;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #5a5bc7;
-    }
-  </style>
+  <title>Cart</title>
 </head>
-<body>
-  <h2>Your Cart</h2>
-  <ul id="list"></ul>
-  <p><b>Total: ₹<span id="total">0</span></b></p>
-  <button onclick="placeOrder()">Order</button>
+<body bgcolor="#f8f9fa" style="margin:20px;font-family:Arial" onload="show()">
+  <h2 style="color:#667eea;font-size:24px">Your Cart</h2>
+  <ul id="list" style="background:white;padding:20px;list-style:none"></ul>
+  <p style="font-size:18px"><b>Total: ₹<span id="total">0</span></b></p>
+  <button onclick="order()" style="background:#667eea;color:white;border:none;padding:10px 20px;font-size:16px;cursor:pointer"><b>Order</b></button>
 
   <script>
-    function showCart() {
-      var cart = localStorage.getItem("cart");
-      var list = document.getElementById("list");
-      var total = 0;
-
-      if (cart == null || cart == "[]") {
-        list.innerHTML = "<li>Your cart is empty</li>";
-        document.getElementById("total").innerHTML = "0";
+    function show(){
+      var c=localStorage.getItem("cart");
+      var l=document.getElementById("list");
+      var t=0;
+      if(!c||c=="[]"){
+        l.innerHTML="<li>Cart is empty</li>";
+        document.getElementById("total").innerHTML="0";
         return;
       }
-
-      cart = JSON.parse(cart);
-      list.innerHTML = "";
-
-      for (var i = 0; i < cart.length; i++) {
-        var item = cart[i];
-        list.innerHTML += "<li>" + item.book + " - ₹" + item.price + "</li>";
-        total = total + item.price;
+      c=JSON.parse(c);
+      l.innerHTML="";
+      for(var i=0;i<c.length;i++){
+        l.innerHTML+="<li style='margin:10px 0;padding:8px;border-bottom:1px solid #e9ecef'>"+c[i].book+" - ₹"+c[i].price+"</li>";
+        t+=c[i].price;
       }
-
-      document.getElementById("total").innerHTML = total;
+      document.getElementById("total").innerHTML=t;
     }
-
-    function placeOrder() {
-      var cart = localStorage.getItem("cart");
-      if (cart == null || cart == "[]") {
-        alert("Cart is empty!");
-        return;
-      }
-      alert("Order placed successfully!");
-      localStorage.setItem("cart", "[]");
-      showCart();
+    function order(){
+      var c=localStorage.getItem("cart");
+      if(!c||c=="[]"){alert("Cart is empty!");return;}
+      alert("Order placed!");
+      localStorage.setItem("cart","[]");
+      show();
     }
-
-    showCart();
   </script>
 </body>
 </html>
