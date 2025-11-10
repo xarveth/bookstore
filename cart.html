@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
-<body bgcolor="#f8f9fa" style="margin:20px;font-family:Arial" onload="showCart()">
-  <h2 style="color:#667eea;font-size:24px">Your Cart</h2>
-  <ul id="list" style="background:white;padding:20px;list-style:none"></ul>
-  <p style="font-size:18px"><b>Total: ₹<span id="total">0</span></b></p>
-  <button onclick="placeOrder()" style="background:#667eea;color:white;border:none;padding:10px 20px;font-size:16px;cursor:pointer"><b>Order</b></button>
+<body class="cart" onload="showCart()">
+  <h2>Your Cart</h2>
+  <ul id="list"></ul>
+  <p><b>Total: ₹<span id="total">0</span></b></p>
+  <button onclick="placeOrder()">Order</button>
 </body>
 </html>
