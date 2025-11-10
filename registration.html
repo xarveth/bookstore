@@ -1,150 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Register - SRGI Bookstore</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      padding: 20px;
-      background-color: #667eea;
-      text-align: center;
-    }
-    .form-container {
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      width: 400px;
-      margin: 20px auto;
-    }
-    h2 {
-      color: #667eea;
-      margin-bottom: 25px;
-      font-size: 26px;
-    }
-    label {
-      display: block;
-      text-align: left;
-      margin-bottom: 6px;
-      color: #333;
-      font-weight: bold;
-      font-size: 14px;
-    }
-    input[type="text"],
-    input[type="password"] {
-      width: 93%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 2px solid #e9ecef;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    textarea {
-      width: 93%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 2px solid #e9ecef;
-      border-radius: 6px;
-      font-size: 14px;
-      font-family: Arial;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #667eea;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    button:hover {
-      background-color: #5a5bc7;
-    }
-    .back-btn {
-      background-color: #6c757d;
-    }
-    .back-btn:hover {
-      background-color: #5a6268;
-    }
-    .radio-group, .checkbox-group {
-      text-align: left;
-      margin-bottom: 15px;
-    }
-  </style>
+  <title>Registration</title>
 </head>
-<body>
-  <div class="form-container">
-    <h2>Registration</h2>
-    <form onsubmit="return validateForm()">
-      <label>Name:</label>
-      <input type="text" id="name" placeholder="Enter your name">
-
-      <label>Email:</label>
-      <input type="text" id="email" placeholder="Enter your email">
-
-      <label>Gender:</label>
-      <div class="radio-group">
-        <input type="radio" name="gender"> Male
-        <input type="radio" name="gender"> Female
-        <input type="radio" name="gender"> Other
-      </div>
-
-      <label>Mobile No:</label>
-      <input type="text" id="phone" placeholder="10-digit number">
-
-      <label>Date of Birth:</label><br>
-      <input type="text" size="2" placeholder="DD" style="width:18%;display:inline-block">
-      <input type="text" size="2" placeholder="MM" style="width:18%;display:inline-block">
-      <input type="text" size="4" placeholder="YYYY" style="width:30%;display:inline-block"><br><br>
-
-      <label>Languages Known:</label>
-      <div class="checkbox-group">
-        <input type="checkbox"> Hindi
-        <input type="checkbox"> English
-        <input type="checkbox"> Others
-      </div>
-
-      <label>Address:</label><br>
-      <textarea rows="3" placeholder="Enter your address"></textarea><br>
-
-      <label>Create Password:</label>
-      <input type="password" id="password" placeholder="Enter password">
-
-      <button type="submit">Register</button>
-      <button type="button" class="back-btn" onclick="window.location.href='right.html'">Back</button>
+<body bgcolor="#667eea" style="margin:0;padding:20px;text-align:center;font-family:Arial">
+  <div style="background:white;padding:30px;width:400px;margin:20px auto;border-radius:12px">
+    <h2 style="color:#667eea;font-size:26px">Registration</h2>
+    <form onsubmit="return validate()">
+      <table width="100%">
+        <tr>
+          <td align="left"><b>Name:</b></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="name" placeholder="Enter your name" style="width:95%;padding:10px;border:2px solid #e9ecef;border-radius:6px"></td>
+        </tr>
+        <tr>
+          <td align="left"><b>Email:</b></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="email" placeholder="Enter your email" style="width:95%;padding:10px;border:2px solid #e9ecef;border-radius:6px"></td>
+        </tr>
+        <tr>
+          <td align="left"><b>Gender:</b></td>
+        </tr>
+        <tr>
+          <td align="left">
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><b>Mobile No:</b></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="phone" placeholder="10-digit number" style="width:95%;padding:10px;border:2px solid #e9ecef;border-radius:6px"></td>
+        </tr>
+        <tr>
+          <td align="left"><b>Date of Birth:</b></td>
+        </tr>
+        <tr>
+          <td align="left">
+            <input type="text" size="2" placeholder="DD" style="width:18%;padding:10px;border:2px solid #e9ecef;border-radius:6px">
+            <input type="text" size="2" placeholder="MM" style="width:18%;padding:10px;border:2px solid #e9ecef;border-radius:6px">
+            <input type="text" size="4" placeholder="YYYY" style="width:30%;padding:10px;border:2px solid #e9ecef;border-radius:6px">
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><b>Languages Known:</b></td>
+        </tr>
+        <tr>
+          <td align="left">
+            <input type="checkbox"> Hindi
+            <input type="checkbox"> English
+            <input type="checkbox"> Others
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><b>Address:</b></td>
+        </tr>
+        <tr>
+          <td><textarea rows="3" placeholder="Enter your address" style="width:95%;padding:10px;border:2px solid #e9ecef;border-radius:6px;font-family:Arial"></textarea></td>
+        </tr>
+        <tr>
+          <td align="left"><b>Create Password:</b></td>
+        </tr>
+        <tr>
+          <td><input type="password" id="password" placeholder="Enter password" style="width:95%;padding:10px;border:2px solid #e9ecef;border-radius:6px"></td>
+        </tr>
+        <tr>
+          <td><br><button type="submit" style="width:100%;padding:12px;background:#667eea;color:white;border:none;border-radius:6px;cursor:pointer;font-size:16px"><b>Register</b></button></td>
+        </tr>
+        <tr>
+          <td><button type="button" onclick="location.href='right.html'" style="width:100%;padding:12px;background:#6c757d;color:white;border:none;border-radius:6px;cursor:pointer;font-size:16px"><b>Back</b></button></td>
+        </tr>
+      </table>
     </form>
   </div>
 
   <script>
-    function validateForm() {
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var phone = document.getElementById("phone").value;
-      var password = document.getElementById("password").value;
-
-      if (name.length < 6) {
-        alert("Name must be at least 6 characters.");
-        return false;
-      }
-
-      if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
-        alert("Invalid email address.");
-        return false;
-      }
-
-      if (phone.length != 10) {
-        alert("Phone number must be exactly 10 digits.");
-        return false;
-      }
-
-      if (password.length < 8) {
-        alert("Password must be at least 8 characters long.");
-        return false;
-      }
-
+    function validate(){
+      var n=document.getElementById("name").value;
+      var e=document.getElementById("email").value;
+      var p=document.getElementById("phone").value;
+      var pw=document.getElementById("password").value;
+      if(n.length<6){alert("Name must be 6+ characters");return false;}
+      if(e.indexOf("@")==-1||e.indexOf(".")==-1){alert("Invalid email");return false;}
+      if(p.length!=10){alert("Phone must be 10 digits");return false;}
+      if(pw.length<8){alert("Password must be 8+ characters");return false;}
       alert("Registration Successful!");
       return true;
     }
