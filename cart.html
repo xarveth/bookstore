@@ -1,51 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <title>Your Cart</title>
   <style>
-    body{font-family:Arial;margin:20px;background:#f8f9fa}
-    h2{color:#667eea;font-size:24px;margin-bottom:20px}
-    ul{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);list-style:none}
-    li{margin:10px 0;padding:8px;border-bottom:1px solid #e9ecef;color:#495057}
-    li:last-child{border-bottom:none}
-    p{font-size:18px;margin-top:20px;color:#333}
-    button{background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);color:#fff;border:none;padding:10px 20px;cursor:pointer;border-radius:5px;font-weight:bold;font-size:16px;transition:all 0.3s ease}
-    button:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(102,126,234,0.3)}
+    body {
+      font-family: Arial;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+    h2 {
+      color: #667eea;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    ul {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      list-style: none;
+    }
+    li {
+      margin: 10px 0;
+      padding: 8px;
+      border-bottom: 1px solid #e9ecef;
+      color: #495057;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+      color: #333;
+    }
+    button {
+      background-color: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #5a5bc7;
+    }
   </style>
 </head>
 <body>
   <h2>Your Cart</h2>
   <ul id="list"></ul>
   <p><b>Total: ₹<span id="total">0</span></b></p>
-  <button onclick="checkout()">Order</button>
+  <button onclick="placeOrder()">Order</button>
 
   <script>
-    // Clean invalid entries
-    let c=(JSON.parse(localStorage.getItem("cart"))||[]).filter(i=>i.b && i.p);
-    let t=+localStorage.getItem("total")||0;
+    function showCart() {
+      var cart = localStorage.getItem("cart");
+      var list = document.getElementById("list");
+      var total = 0;
 
-    function show(){
-      list.innerHTML="";
-      t=0;
-      c.forEach(i=>{
-        list.innerHTML+=`<li>${i.b} - ₹${i.p}</li>`;
-        t+=i.p;
-      });
-      total.textContent=t;
+      if (cart == null || cart == "[]") {
+        list.innerHTML = "<li>Your cart is empty</li>";
+        document.getElementById("total").innerHTML = "0";
+        return;
+      }
+
+      cart = JSON.parse(cart);
+      list.innerHTML = "";
+
+      for (var i = 0; i < cart.length; i++) {
+        var item = cart[i];
+        list.innerHTML += "<li>" + item.book + " - ₹" + item.price + "</li>";
+        total = total + item.price;
+      }
+
+      document.getElementById("total").innerHTML = total;
     }
 
-    function checkout(){
-      if(!c.length) return alert("Cart empty!");
-      alert("Order placed!");
-      c=[]; t=0;
-      localStorage.setItem("cart","[]");
-      localStorage.setItem("total","0");
-      show();
+    function placeOrder() {
+      var cart = localStorage.getItem("cart");
+      if (cart == null || cart == "[]") {
+        alert("Cart is empty!");
+        return;
+      }
+      alert("Order placed successfully!");
+      localStorage.setItem("cart", "[]");
+      showCart();
     }
 
-    localStorage.setItem("cart",JSON.stringify(c)); // update cleaned data
-    show();
+    showCart();
   </script>
 </body>
 </html>
