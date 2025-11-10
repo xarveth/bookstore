@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Catalogue</title>
+  <script src="script.js"></script>
 </head>
 <body bgcolor="#f8f9fa" style="margin:20px;font-family:Arial">
   <h3 style="color:#667eea;font-size:24px">Book Catalogue</h3>
@@ -16,62 +17,52 @@
       <td><img src="https://envs.sh/9rv.jpg" width="55" height="70"> Artificial Intelligence</td>
       <td>Wiley</td>
       <td>₹499</td>
-      <td><button onclick="add('Artificial Intelligence',499)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Artificial Intelligence',499)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
     <tr>
       <td><img src="https://envs.sh/9st.jpg" width="55" height="70"> Civil Engineering</td>
       <td>Prentice Hall</td>
       <td>₹630</td>
-      <td><button onclick="add('Civil Engineering',630)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Civil Engineering',630)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
     <tr>
       <td><img src="https://files.catbox.moe/lx15ny.jpg" width="55" height="70"> Data Structures</td>
       <td>BPB</td>
       <td>₹399</td>
-      <td><button onclick="add('Data Structures',399)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Data Structures',399)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
     <tr>
       <td><img src="https://envs.sh/9r6.jpg" width="55" height="70"> Electrical Engineering</td>
       <td>BPB</td>
       <td>₹555</td>
-      <td><button onclick="add('Electrical Engineering',555)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Electrical Engineering',555)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
     <tr>
       <td><img src="https://m.media-amazon.com/images/I/61EBD9rDkTL._SY466_.jpg" width="55" height="70"> Machine Design</td>
       <td>R.S. Khurmi</td>
       <td>₹490</td>
-      <td><button onclick="add('Machine Design',490)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Machine Design',490)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
     <tr>
       <td><img src="https://m.media-amazon.com/images/I/91VXcW8kLRL._SY466_.jpg" width="55" height="70"> Concrete Technology</td>
       <td>M.S. Shetty</td>
       <td>₹390</td>
-      <td><button onclick="add('Concrete Technology',390)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Concrete Technology',390)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
     <tr>
       <td><img src="https://m.media-amazon.com/images/I/610DyiR6SRL._SY466_.jpg" width="55" height="70"> Power Systems</td>
       <td>P.S.R. Murty</td>
       <td>₹590</td>
-      <td><button onclick="add('Power Systems',590)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Power Systems',590)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
     <tr>
       <td><img src="https://envs.sh/9ry.jpg" width="55" height="70"> Network Security</td>
       <td>S. Pramanik</td>
       <td>₹450</td>
-      <td><button onclick="add('Network Security',450)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
+      <td><button onclick="addToCart('Network Security',450)" style="background:#667eea;color:white;border:none;padding:6px 12px;cursor:pointer"><b>Add</b></button></td>
     </tr>
   </table>
   <br>
   <button onclick="location.href='cart.html'" style="background:#764ba2;color:white;border:none;padding:12px 24px;font-size:16px;cursor:pointer"><b>Proceed to Checkout</b></button>
-
-  <script>
-    function add(b,p){
-      var c=localStorage.getItem("cart");
-      c=c?JSON.parse(c):[];
-      c.push({book:b,price:p});
-      localStorage.setItem("cart",JSON.stringify(c));
-      alert(b+" added!");
-    }
-  </script>
 </body>
 </html>
