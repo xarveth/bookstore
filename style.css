@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+/* Top Bar Styles */
+.top-bar {
+  background-color: #667eea;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.top-bar img {
+  width: 90px;
+  height: 90px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.top-bar h1 {
+  color: white;
+  font-size: 28px;
+  display: inline;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.top-bar a {
+  color: white;
+  padding: 8px 16px;
+  background: #764ba2;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.top-bar a:hover {
+  background: #5a3780;
+}
+
+/* Left Panel Styles */
+.left-panel {
+  background-color: #e6ecff;
+  padding: 20px;
+  border-right: 3px solid #667eea;
+}
+
+.left-panel h3 {
+  color: #667eea;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 8px;
+}
+
+.left-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-panel li {
+  margin: 10px 0;
+  color: #495057;
+  font-weight: bold;
+}
+
+/* Home Page Styles */
+.home {
+  background-color: white;
+  padding: 60px;
+  text-align: center;
+}
+
+.home h2 {
+  color: #667eea;
+  font-size: 24px;
+}
+
+.home p {
+  color: #444;
+  font-size: 16px;
+}
+
+/* Catalogue Styles */
+.catalogue {
+  background-color: #f8f9fa;
+  margin: 20px;
+}
+
+.catalogue h3 {
+  color: #667eea;
+  font-size: 24px;
+}
+
+.catalogue table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.catalogue th {
+  background-color: #667eea;
+  color: white;
+  padding: 10px;
+}
+
+.catalogue td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.catalogue img {
+  width: 55px;
+  height: 70px;
+}
+
+.catalogue button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.catalogue button:hover {
+  background: #5a5bc7;
+}
+
+.checkout-btn {
+  background: #764ba2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.checkout-btn:hover {
+  background: #5a3780;
+}
+
+/* Cart Styles */
+.cart {
+  background-color: #f8f9fa;
+  margin: 20px;
+}
+
+.cart h2 {
+  color: #667eea;
+  font-size: 24px;
+}
+
+.cart ul {
+  background: white;
+  padding: 20px;
+  list-style: none;
+}
+
+.cart li {
+  margin: 10px 0;
+  padding: 8px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cart button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart button:hover {
+  background: #5a5bc7;
+}
+
+/* Form Styles */
+.form-container {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+.form-container h2 {
+  color: #667eea;
+  font-size: 26px;
+  text-align: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container textarea {
+  width: 95%;
+  padding: 10px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form-container button:hover {
+  background: #5a5bc7;
+}
+
+.form-container .back-btn {
+  background: #6c757d;
+}
+
+.form-container .back-btn:hover {
+  background: #5a6268;
+}
+
+.form-container a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+.form-bg {
+  background-color: #667eea;
+  padding-top: 100px;
+  text-align: center;
+  min-height: 100vh;
+}
