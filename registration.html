@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Register - SRGI Bookstore</title>
-  <script src="validation.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       margin: 0;
       padding: 20px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .form-container {
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 400px;
+      background-color: #667eea;
       text-align: center;
     }
-    .form-container h2 {
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 400px;
+      margin: 20px auto;
+    }
+    h2 {
       color: #667eea;
       margin-bottom: 25px;
       font-size: 26px;
     }
-    .form-container label {
+    label {
       display: block;
       text-align: left;
       margin-bottom: 6px;
@@ -36,23 +30,14 @@
       font-weight: bold;
       font-size: 14px;
     }
-    .form-container input[type="text"],
-    .form-container input[type="password"] {
+    input[type="text"],
+    input[type="password"] {
       width: 93%;
       padding: 10px;
       margin-bottom: 15px;
       border: 2px solid #e9ecef;
       border-radius: 6px;
       font-size: 14px;
-      transition: border 0.3s ease;
-    }
-    .form-container input:focus {
-      outline: none;
-      border-color: #667eea;
-    }
-    .form-container input[type="radio"],
-    .form-container input[type="checkbox"] {
-      margin-right: 5px;
     }
     textarea {
       width: 93%;
@@ -61,35 +46,28 @@
       border: 2px solid #e9ecef;
       border-radius: 6px;
       font-size: 14px;
-      font-family: Arial, sans-serif;
-      transition: border 0.3s ease;
-    }
-    textarea:focus {
-      outline: none;
-      border-color: #667eea;
+      font-family: Arial;
     }
     button {
       width: 100%;
       padding: 12px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background-color: #667eea;
       color: white;
       font-weight: bold;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       font-size: 16px;
-      transition: all 0.3s ease;
       margin-bottom: 10px;
     }
     button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+      background-color: #5a5bc7;
     }
-    button[type="button"] {
-      background: #6c757d;
+    .back-btn {
+      background-color: #6c757d;
     }
-    button[type="button"]:hover {
-      background: #5a6268;
+    .back-btn:hover {
+      background-color: #5a6268;
     }
     .radio-group, .checkbox-group {
       text-align: left;
@@ -100,13 +78,12 @@
 <body>
   <div class="form-container">
     <h2>Registration</h2>
-
     <form onsubmit="return validateForm()">
       <label>Name:</label>
-      <input type="text" id="name" placeholder="Enter your name"><br>
+      <input type="text" id="name" placeholder="Enter your name">
 
       <label>Email:</label>
-      <input type="text" id="email" placeholder="Enter your email"><br>
+      <input type="text" id="email" placeholder="Enter your email">
 
       <label>Gender:</label>
       <div class="radio-group">
@@ -116,7 +93,7 @@
       </div>
 
       <label>Mobile No:</label>
-      <input type="text" id="phone" placeholder="10-digit number"><br>
+      <input type="text" id="phone" placeholder="10-digit number">
 
       <label>Date of Birth:</label><br>
       <input type="text" size="2" placeholder="DD" style="width:18%;display:inline-block">
@@ -134,11 +111,43 @@
       <textarea rows="3" placeholder="Enter your address"></textarea><br>
 
       <label>Create Password:</label>
-      <input type="password" id="password" placeholder="Enter password"><br>
+      <input type="password" id="password" placeholder="Enter password">
 
       <button type="submit">Register</button>
-      <button type="button" onclick="window.location.href='right.html'">Back</button>
+      <button type="button" class="back-btn" onclick="window.location.href='right.html'">Back</button>
     </form>
   </div>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var password = document.getElementById("password").value;
+
+      if (name.length < 6) {
+        alert("Name must be at least 6 characters.");
+        return false;
+      }
+
+      if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+        alert("Invalid email address.");
+        return false;
+      }
+
+      if (phone.length != 10) {
+        alert("Phone number must be exactly 10 digits.");
+        return false;
+      }
+
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return false;
+      }
+
+      alert("Registration Successful!");
+      return true;
+    }
+  </script>
 </body>
 </html>
