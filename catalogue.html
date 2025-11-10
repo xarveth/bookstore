@@ -11,6 +11,7 @@
     img{width:55px;height:70px;border-radius:4px;object-fit:cover}
     button{background:#f4a460;color:#fff;border:none;padding:5px 10px;cursor:pointer}
     button:hover{background:#e38b3c}
+    .checkout-btn{margin-top:20px;padding:10px 20px;font-size:16px;font-weight:bold}
   </style>
 </head>
 <body>
@@ -27,6 +28,8 @@
     <tr><td><img src="https://m.media-amazon.com/images/I/610DyiR6SRL._SY466_.jpg"> Power Systems</td><td>P.S.R. Murty</td><td>₹590</td><td><button onclick="add('Power Systems',590)">Add</button></td></tr>
     <tr><td><img src="https://envs.sh/9ry.jpg"> Network Security</td><td>S. Pramanik</td><td>₹450</td><td><button onclick="add('Network Security',450)">Add</button></td></tr>
   </table>
+
+  <button class="checkout-btn" onclick="window.location.href='cart.html'">Proceed to Checkout</button>
 
   <script>
     let cart=JSON.parse(localStorage.getItem("cart")||"[]");
