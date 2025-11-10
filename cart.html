@@ -2,38 +2,12 @@
 <html>
 <head>
   <title>Cart</title>
+  <script src="script.js"></script>
 </head>
-<body bgcolor="#f8f9fa" style="margin:20px;font-family:Arial" onload="show()">
+<body bgcolor="#f8f9fa" style="margin:20px;font-family:Arial" onload="showCart()">
   <h2 style="color:#667eea;font-size:24px">Your Cart</h2>
   <ul id="list" style="background:white;padding:20px;list-style:none"></ul>
   <p style="font-size:18px"><b>Total: ₹<span id="total">0</span></b></p>
-  <button onclick="order()" style="background:#667eea;color:white;border:none;padding:10px 20px;font-size:16px;cursor:pointer"><b>Order</b></button>
-
-  <script>
-    function show(){
-      var c=localStorage.getItem("cart");
-      var l=document.getElementById("list");
-      var t=0;
-      if(!c||c=="[]"){
-        l.innerHTML="<li>Cart is empty</li>";
-        document.getElementById("total").innerHTML="0";
-        return;
-      }
-      c=JSON.parse(c);
-      l.innerHTML="";
-      for(var i=0;i<c.length;i++){
-        l.innerHTML+="<li style='margin:10px 0;padding:8px;border-bottom:1px solid #e9ecef'>"+c[i].book+" - ₹"+c[i].price+"</li>";
-        t+=c[i].price;
-      }
-      document.getElementById("total").innerHTML=t;
-    }
-    function order(){
-      var c=localStorage.getItem("cart");
-      if(!c||c=="[]"){alert("Cart is empty!");return;}
-      alert("Order placed!");
-      localStorage.setItem("cart","[]");
-      show();
-    }
-  </script>
+  <button onclick="placeOrder()" style="background:#667eea;color:white;border:none;padding:10px 20px;font-size:16px;cursor:pointer"><b>Order</b></button>
 </body>
 </html>
