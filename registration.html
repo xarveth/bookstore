@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Registration</title>
+  <script src="validation.js"></script>
 </head>
 <body bgcolor="#667eea" style="margin:0;padding:20px;text-align:center;font-family:Arial">
   <div style="background:white;padding:30px;width:400px;margin:20px auto;border-radius:12px">
     <h2 style="color:#667eea;font-size:26px">Registration</h2>
-    <form onsubmit="return validate()">
+    <form onsubmit="return validateForm()">
       <table width="100%">
         <tr>
           <td align="left"><b>Name:</b></td>
@@ -77,20 +78,5 @@
       </table>
     </form>
   </div>
-
-  <script>
-    function validate(){
-      var n=document.getElementById("name").value;
-      var e=document.getElementById("email").value;
-      var p=document.getElementById("phone").value;
-      var pw=document.getElementById("password").value;
-      if(n.length<6){alert("Name must be 6+ characters");return false;}
-      if(e.indexOf("@")==-1||e.indexOf(".")==-1){alert("Invalid email");return false;}
-      if(p.length!=10){alert("Phone must be 10 digits");return false;}
-      if(pw.length<8){alert("Password must be 8+ characters");return false;}
-      alert("Registration Successful!");
-      return true;
-    }
-  </script>
 </body>
 </html>
