@@ -2,34 +2,23 @@
 <html>
 <head>
   <title>Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#667eea" style="margin:0;padding-top:100px;text-align:center;font-family:Arial">
-  <div style="background:white;padding:30px;width:350px;margin:0 auto;border-radius:12px">
-    <h2 style="color:#667eea;font-size:26px">Login</h2>
+<body class="form-bg">
+  <div class="form-container">
+    <h2>Login</h2>
     <form>
-      <table width="100%">
-        <tr>
-          <td align="left"><b>Username:</b></td>
-        </tr>
-        <tr>
-          <td><input type="text" placeholder="Enter Username" style="width:95%;padding:10px;border:2px solid #e9ecef;border-radius:6px"></td>
-        </tr>
-        <tr>
-          <td align="left"><b>Password:</b></td>
-        </tr>
-        <tr>
-          <td><input type="password" placeholder="Enter Password" style="width:95%;padding:10px;border:2px solid #e9ecef;border-radius:6px"></td>
-        </tr>
-        <tr>
-          <td><br><button type="submit" style="width:100%;padding:12px;background:#667eea;color:white;border:none;border-radius:6px;cursor:pointer;font-size:16px"><b>Login</b></button></td>
-        </tr>
-        <tr>
-          <td><button type="button" onclick="location.href='right.html'" style="width:100%;padding:12px;background:#6c757d;color:white;border:none;border-radius:6px;cursor:pointer;font-size:16px"><b>Back</b></button></td>
-        </tr>
-      </table>
-      <br>
-      <a href="#" style="color:#667eea">Forgot Password?</a><br>
-      <a href="registration.html" target="right" style="color:#667eea">Don't have an account? Sign Up</a>
+      <label><b>Username:</b></label>
+      <input type="text" placeholder="Enter Username">
+      
+      <label><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password">
+      
+      <button type="submit">Login</button>
+      <button type="button" class="back-btn" onclick="location.href='right.html'">Back</button>
+      <br><br>
+      <a href="#">Forgot Password?</a><br>
+      <a href="registration.html" target="right">Don't have an account? Sign Up</a>
     </form>
   </div>
 </body>
