@@ -1,33 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Login - SRGI Bookstore</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: #667eea;
+      text-align: center;
+      padding-top: 100px;
     }
     .form-container {
-      background-color: #ffffff;
+      background-color: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       width: 350px;
-      text-align: center;
+      margin: 0 auto;
     }
-    .form-container h2 {
+    h2 {
       color: #667eea;
       margin-bottom: 25px;
       font-size: 26px;
     }
-    .form-container label {
+    label {
       display: block;
       text-align: left;
       margin-bottom: 6px;
@@ -35,41 +31,34 @@
       font-weight: bold;
       font-size: 14px;
     }
-    .form-container input {
+    input {
       width: 93%;
       padding: 10px;
       margin-bottom: 15px;
       border: 2px solid #e9ecef;
       border-radius: 6px;
       font-size: 14px;
-      transition: border 0.3s ease;
-    }
-    .form-container input:focus {
-      outline: none;
-      border-color: #667eea;
     }
     button {
       width: 100%;
       padding: 12px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background-color: #667eea;
       color: white;
       font-weight: bold;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       font-size: 16px;
-      transition: all 0.3s ease;
       margin-bottom: 10px;
     }
     button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+      background-color: #5a5bc7;
     }
-    button[type="button"] {
-      background: #6c757d;
+    .back-btn {
+      background-color: #6c757d;
     }
-    button[type="button"]:hover {
-      background: #5a6268;
+    .back-btn:hover {
+      background-color: #5a6268;
     }
     a {
       color: #667eea;
@@ -84,19 +73,16 @@
 <body>
   <div class="form-container">
     <h2>Login</h2>
-
     <form>
       <label>Username:</label>
-      <input type="text" placeholder="Enter Username"><br>
+      <input type="text" placeholder="Enter Username">
 
       <label>Password:</label>
-      <input type="password" placeholder="Enter Password"><br>
+      <input type="password" placeholder="Enter Password">
 
       <button type="submit">Login</button>
-
-      <button type="button" onclick="window.location.href='right.html'">Back</button>
+      <button type="button" class="back-btn" onclick="window.location.href='right.html'">Back</button>
       <br><br>
-
       <a href="#">Forgot Password?</a><br>
       <a href="registration.html" target="right">Don't have an account? Sign Up</a>
     </form>
