@@ -13,10 +13,11 @@ body {
 }
 
 .top-bar img {
-  width: 90px;
-  height: 90px;
+  width: 60px;        /* Smaller logo */
+  height: 60px;
   vertical-align: middle;
-  margin-right: 15px;
+  margin-right: 10px;
+  background: none;    /* No background */
 }
 
 .top-bar h1 {
