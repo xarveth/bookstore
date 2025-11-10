@@ -3,9 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <title>Login - SRGI Bookstore</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+    .form-container h2 {
+      color: #667eea;
+      margin-bottom: 25px;
+      font-size: 26px;
+    }
+    .form-container label {
+      display: block;
+      text-align: left;
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .form-container input {
+      width: 93%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #e9ecef;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border 0.3s ease;
+    }
+    .form-container input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102,126,234,0.4);
+    }
+    button[type="button"] {
+      background: #6c757d;
+    }
+    button[type="button"]:hover {
+      background: #5a6268;
+    }
+    a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body class="form-page">
+<body>
   <div class="form-container">
     <h2>Login</h2>
 
@@ -17,7 +93,6 @@
       <input type="password" placeholder="Enter Password"><br>
 
       <button type="submit">Login</button>
-      <br><br>
 
       <button type="button" onclick="window.location.href='right.html'">Back</button>
       <br><br>
