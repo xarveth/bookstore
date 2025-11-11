@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.top-bar {
+  background: #667eea;
+  text-align: center;
+  padding: 15px;
+}
+
+.top-bar h1 {
+  color: white;
+  font-size: 28px;
+  display: inline;
+  margin: 0;
+}
+
+.top-bar img {
+  width: 90px;
+  height: 90px;
+  vertical-align: middle;
+}
+
+.top-bar a {
+  color: white;
+  padding: 8px 16px;
+  background: #764ba2;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.left-panel {
+  background: #e6ecff;
+  padding: 20px;
+  border-right: 3px solid #667eea;
+}
+
+.left-panel h3 {
+  color: #667eea;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 8px;
+}
+
+.left-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-panel li {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.home {
+  background: white;
+  padding: 60px;
+  text-align: center;
+}
+
+.home h2 {
+  color: #667eea;
+}
+
+.catalogue, .cart {
+  background: #f8f9fa;
+  margin: 20px;
+}
+
+.catalogue h3, .cart h2 {
+  color: #667eea;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #667eea;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+img {
+  width: 55px;
+  height: 70px;
+}
+
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  background: #764ba2;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.cart ul {
+  background: white;
+  padding: 20px;
+  list-style: none;
+}
+
+.cart li {
+  margin: 10px 0;
+  padding: 8px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.form-bg {
+  background: #667eea;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.form-container {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  margin: 20px auto;
+}
+
+.form-container h2 {
+  color: #667eea;
+}
+
+.form-container input, .form-container textarea {
+  width: 95%;
+  padding: 10px;
+  border: 2px solid #e9ecef;
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.back-btn {
+  background: #6c757d;
+}
+
+.form-container a {
+  color: #667eea;
+  text-decoration: none;
+}
