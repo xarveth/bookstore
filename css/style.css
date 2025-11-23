@@ -4,13 +4,14 @@ body {
 }
 
 .top-bar {
-  background: #4a4a4a;
+  background: white;
   text-align: center;
   padding: 15px;
+  border-bottom: 2px solid #000;
 }
 
 .top-bar h1 {
-  color: white;
+  color: #000;
   font-size: 28px;
   display: inline;
   margin: 0;
@@ -23,23 +24,24 @@ body {
 }
 
 .top-bar a {
-  color: white;
+  color: #000;
   padding: 8px 16px;
-  background: #6c757d;
+  background: white;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
+  border: 1px solid #000;
 }
 
 .left-panel {
-  background: #f5f5f5;
+  background: white;
   padding: 20px;
-  border-right: 3px solid #4a4a4a;
+  border-right: 2px solid #000;
 }
 
 .left-panel h3 {
-  color: #4a4a4a;
-  border-bottom: 2px solid #4a4a4a;
+  color: #000;
+  border-bottom: 2px solid #000;
   padding-bottom: 8px;
 }
 
@@ -60,16 +62,16 @@ body {
 }
 
 .home h2 {
-  color: #4a4a4a;
+  color: #000;
 }
 
 .catalogue, .cart {
-  background: #f8f9fa;
+  background: white;
   margin: 20px;
 }
 
 .catalogue h3, .cart h2 {
-  color: #4a4a4a;
+  color: #000;
 }
 
 table {
@@ -79,14 +81,16 @@ table {
 }
 
 th {
-  background: #4a4a4a;
-  color: white;
+  background: white;
+  color: #000;
   padding: 10px;
+  border: 1px solid #000;
+  font-weight: bold;
 }
 
 td {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #000;
 }
 
 img {
@@ -95,18 +99,19 @@ img {
 }
 
 button {
-  background: #4a4a4a;
-  color: white;
-  border: none;
+  background: white;
+  color: #000;
+  border: 2px solid #000;
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
 }
 
 .checkout-btn {
-  background: #6c757d;
+  background: white;
   padding: 12px 24px;
   font-size: 16px;
+  border: 2px solid #000;
 }
 
 .cart ul {
@@ -118,11 +123,11 @@ button {
 .cart li {
   margin: 10px 0;
   padding: 8px;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #000;
 }
 
 .form-bg {
-  background: #4a4a4a;
+  background: white;
   padding-top: 100px;
   text-align: center;
 }
@@ -132,16 +137,17 @@ button {
   padding: 30px;
   width: 400px;
   margin: 20px auto;
+  border: 2px solid #000;
 }
 
 .form-container h2 {
-  color: #4a4a4a;
+  color: #000;
 }
 
 .form-container input, .form-container textarea {
   width: 95%;
   padding: 10px;
-  border: 2px solid #e9ecef;
+  border: 1px solid #000;
   margin-bottom: 10px;
 }
 
@@ -152,10 +158,11 @@ button {
 }
 
 .back-btn {
-  background: #6c757d;
+  background: white;
+  border: 2px solid #000;
 }
 
 .form-container a {
-  color: #4a4a4a;
+  color: #000;
   text-decoration: none;
 }
