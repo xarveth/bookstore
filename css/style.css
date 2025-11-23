@@ -4,7 +4,7 @@ body {
 }
 
 .top-bar {
-  background: #667eea;
+  background: #4a4a4a;
   text-align: center;
   padding: 15px;
 }
@@ -25,21 +25,21 @@ body {
 .top-bar a {
   color: white;
   padding: 8px 16px;
-  background: #764ba2;
+  background: #6c757d;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
 }
 
 .left-panel {
-  background: #e6ecff;
+  background: #f5f5f5;
   padding: 20px;
-  border-right: 3px solid #667eea;
+  border-right: 3px solid #4a4a4a;
 }
 
 .left-panel h3 {
-  color: #667eea;
-  border-bottom: 2px solid #667eea;
+  color: #4a4a4a;
+  border-bottom: 2px solid #4a4a4a;
   padding-bottom: 8px;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .home h2 {
-  color: #667eea;
+  color: #4a4a4a;
 }
 
 .catalogue, .cart {
@@ -69,7 +69,7 @@ body {
 }
 
 .catalogue h3, .cart h2 {
-  color: #667eea;
+  color: #4a4a4a;
 }
 
 table {
@@ -79,7 +79,7 @@ table {
 }
 
 th {
-  background: #667eea;
+  background: #4a4a4a;
   color: white;
   padding: 10px;
 }
@@ -95,7 +95,7 @@ img {
 }
 
 button {
-  background: #667eea;
+  background: #4a4a4a;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -104,7 +104,7 @@ button {
 }
 
 .checkout-btn {
-  background: #764ba2;
+  background: #6c757d;
   padding: 12px 24px;
   font-size: 16px;
 }
@@ -122,7 +122,7 @@ button {
 }
 
 .form-bg {
-  background: #667eea;
+  background: #4a4a4a;
   padding-top: 100px;
   text-align: center;
 }
@@ -135,7 +135,7 @@ button {
 }
 
 .form-container h2 {
-  color: #667eea;
+  color: #4a4a4a;
 }
 
 .form-container input, .form-container textarea {
@@ -156,6 +156,6 @@ button {
 }
 
 .form-container a {
-  color: #667eea;
+  color: #4a4a4a;
   text-decoration: none;
 }
